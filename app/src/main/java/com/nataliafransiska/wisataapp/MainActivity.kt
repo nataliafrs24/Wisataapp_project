@@ -122,22 +122,36 @@ fun WisataItem(title: String, description: String, imageResId: Int, buttonText: 
 
 // Fungsi yang mengembalikan ID gambar yang berbeda berdasarkan indeks item
 fun getGambarBerbeda(index: Int): Int {
-    return when (index % 3) {
+    return when (index % 10) {
         0 -> R.drawable.candiprambanan
         1 -> R.drawable.tebingbreksi
         2 -> R.drawable.tugujogja
         3 -> R.drawable.malioboro
+        4 -> R.drawable.tugujogja
+        5 -> R.drawable.candiprambanan
+        6 -> R.drawable.tebingbreksi
+        7 -> R.drawable.malioboro
+        8 -> R.drawable.tugujogja
+        9 -> R.drawable.malioboro
+        10-> R.drawable.tebingbreksi
         else -> R.drawable.candiprambanan
     }
 }
 
 // Fungsi yang mengembalikan deskripsi yang berbeda berdasarkan indeks item
 fun getDeskripsi(index: Int): String {
-    return when (index % 3) {
+    return when (index % 10) {
         0 -> "JawaTengah Indonesia"
         1 -> "Yogyakarta Indonesia"
         2 -> "Yogyakarta Indonesia"
         3 -> "Yogyakarta Indonesia"
+        4 -> "Yogyakarta Indonesia"
+        5 -> "Prambanan Indonesia"
+        6 -> "Jogja Indonesia"
+        7 -> "Prambanan Indonesia"
+        8 -> "Daerah Istimewa Yogyakarta"
+        9 -> "Prambanan Yogyakarta"
+        10-> "Provinsi DIY"
         else -> "Deskripsi singkat tentang tempat wisata default."
     }
 }
@@ -177,13 +191,14 @@ fun MainActivityContent() {
                     0 -> "Candi Prambanan"
                     1 -> "Tebing Breksi"
                     2 -> "Tugu Jogja"
-                    3 -> "Judul Tempat Wisata 3"
-                    4 -> "Judul Tempat Wisata 4"
-                    5 -> "Judul Tempat Wisata 5"
-                    6 -> "Judul Tempat Wisata 6"
-                    7 -> "Judul Tempat Wisata 7"
-                    8 -> "Judul Tempat Wisata 8"
-                    9 -> "Judul Tempat Wisata 9"
+                    3 -> "Nol Km"
+                    4 -> "Tugu Jogja"
+                    5 -> "Candi Prambanan"
+                    6 -> "Tebing Breksi"
+                    7 -> "Nol Kilo Meter"
+                    8 -> "Tugu Jogja"
+                    9 -> "Malioboro"
+                    10-> "Prambanan"
                     else -> "Judul Tempat Wisata Default"
                 }
                 val description = getDeskripsi(index) // Dapatkan deskripsi sesuai dengan indeks
